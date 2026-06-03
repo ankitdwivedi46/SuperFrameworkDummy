@@ -31,7 +31,7 @@ concurrency:
 
 jobs:
   run-super-suite-tests:
-    runs-on: qa-automation
+    runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
       contents: read

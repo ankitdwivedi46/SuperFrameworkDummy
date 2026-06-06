@@ -67,9 +67,9 @@ public class TestGetProductsApi {
     try {
         for (int i = 0; i < productsList.size(); i++) {
             MatcherAssert.assertThat(
-                Integer.parseInt(productsList.get(i).getCATEGORY()),
-                Matchers.equalToIgnoringCase("smartphones")
-            );
+    Integer.parseInt(productsList.get(i).getCATEGORY()),
+    Matchers.equalTo(1)
+);
         }
     } catch (Exception e) {
         e.printStackTrace();

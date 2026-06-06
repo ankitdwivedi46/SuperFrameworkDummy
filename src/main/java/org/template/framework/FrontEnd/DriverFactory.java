@@ -32,7 +32,13 @@ public class DriverFactory {
 
     public static WebDriver createChromeDriver(){
         WebDriverManager.chromedriver().setup();
-        return new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+
+        return new ChromeDriver(options);
     }
 
     public static WebDriver createEdgeDriver(){

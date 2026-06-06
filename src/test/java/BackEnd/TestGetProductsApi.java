@@ -61,12 +61,20 @@ public class TestGetProductsApi {
         }
     }
 
-    @Test(dependsOnMethods = "testGetProductApi")
-    public void testResponseCategory(){
-        for(int i = 0; i < productsList.size(); i++){
-            MatcherAssert.assertThat(Integer.parseInt(productsList.get(i).getCATEGORY()),Matchers.equalToIgnoringCase("smartphones"));
+   @Test(dependsOnMethods = "testGetProductApi")
+   public void testResponseCategory() {
+    try {
+        for (int i = 0; i < productsList.size(); i++) {
+            MatcherAssert.assertThat(
+                productsList.get(i).getCATEGORY(),
+                Matchers.equalToIgnoringCase("smartphones")
+            );
         }
+    } catch (Exception e) {
+        e.printStackTrace();
+        Assert.fail("Exception occurred while validating category: " + e.getMessage());
     }
+}
 
     @Test(dependsOnMethods = "testGetProductApi")
     public void testResponseBrand(){

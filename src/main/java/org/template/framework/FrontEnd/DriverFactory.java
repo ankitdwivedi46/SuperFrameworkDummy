@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.template.framework.FrontEnd.Enums.Browsers;
 import org.template.framework.Utility.Annotation.Author;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 /*
 For Driver Factory -> Using factory desing pattern, based on browser different Web Driver setup happen using switch case

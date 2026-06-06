@@ -122,6 +122,12 @@
 
     <profiles>
         <profile>
+            <id>super</id>
+            <properties>
+                <suiteXmlFile>${apiXmlFile}</suiteXmlFile>
+            </properties>
+        </profile>
+        <profile>
             <id>api</id>
             <properties>
                 <suiteXmlFile>${apiXmlFile}</suiteXmlFile>

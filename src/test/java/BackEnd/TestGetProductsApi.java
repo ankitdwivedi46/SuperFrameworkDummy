@@ -64,7 +64,7 @@ public class TestGetProductsApi {
     @Test(dependsOnMethods = "testGetProductApi")
     public void testResponseCategory(){
         for(int i = 0; i < productsList.size(); i++){
-            MatcherAssert.assertThat(productsList.get(i).getCATEGORY(),Matchers.equalToIgnoringCase("smartphones"));
+            MatcherAssert.assertThat(Integer.parseInt(productsList.get(i).getCATEGORY()),Matchers.equalToIgnoringCase("smartphones"));
         }
     }
 
